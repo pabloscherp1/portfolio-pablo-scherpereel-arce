@@ -774,6 +774,66 @@ a.contact-value:hover { color: var(--accent); }
 
 .overlay-img-clickable:hover { opacity: 0.88; }
 
+/* ── Mobile ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+
+  /* Hero */
+  .hero { height: auto; min-height: 100svh; }
+  .hero-top { padding: 32px 20px 28px; }
+  .hero-title-line { white-space: normal; }
+  .hero-orbit { width: 100vw; opacity: 0.15; }
+  .hero-stats {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    margin-right: 0;
+    padding: 20px 0 20px 0;
+  }
+  .stat-item:nth-child(odd) { border-right: 1px solid var(--rule); padding-right: 20px; }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) { border-bottom: none; }
+  .stat-number { font-size: 28px; }
+
+  /* Projects section */
+  .projects-section { padding: 48px 20px 64px; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .regular-grid { grid-template-columns: 1fr 1fr; }
+  .coursework-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Overlay */
+  .overlay-header { padding: 0 20px; }
+  .overlay-body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 28px 20px;
+  }
+  .overlay-hero-img .overlay-img-real { height: 220px; }
+  .overlay-gallery .overlay-img-real  { height: 80px; }
+  .overlay-footer { padding: 0 20px; }
+
+  /* About */
+  .about-section {
+    padding: 48px 20px 64px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 20px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
 /* ── Footer ──────────────────────────────────────────────── */
 .site-footer {
   padding: 28px 48px;
