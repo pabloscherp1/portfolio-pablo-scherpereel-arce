@@ -169,10 +169,10 @@ const projects = [
       { label: "Program", value: "Nordend · ERT EPFL" }
     ],
     heroPlaceholder: "08-hero.jpg",
-    heroImage: "media/08/08-hero-new.png",
+    heroImage: "media/08/08-hero.jpg",
     galleryPlaceholders: ["08-gallery-1.jpg", "08-gallery-2.jpg", "08-gallery-3.jpg"],
-    galleryImages: ["media/08/08-2.jpg", "media/08/08-hero.jpg", "media/08/08-4.png"],
-    galleryImagesContain: [true, false, false],
+    galleryImages: ["media/08/08-2.png", "media/08/08-4.png", "media/08/08-3.png"],
+    galleryImagesContain: [false, false, false],
     featured: false
   },
   {
