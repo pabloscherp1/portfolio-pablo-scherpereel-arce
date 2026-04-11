@@ -18,7 +18,8 @@ const projects = [
     heroImage: "media/01/01-hero.jpg",
     galleryPlaceholders: ["01-2.jpg", "01-3.jpg", "01-4.jpg"],
     galleryImages: ["media/01/01-2.jpg", "media/01/01-3.jpg", "media/01/01-4.jpg"],
-    featured: true
+    featured: true,
+    ongoing: true
   },
   {
     id: "02",
