@@ -1,0 +1,271 @@
+const projects = [
+  {
+    id: "01",
+    title: "Endurance Lunar Rover",
+    subtitle: "NASA JPL · Master's Thesis 2026",
+    badge: "Master's Thesis: 2026",
+    tags: ["Mission Autonomy", "Task Planning", "Fault Management", "NASA JPL"],
+    brief: "Mission-level autonomy architecture and execution layer for NASA's Endurance lunar rover.",
+    overview: "Endurance is NASA's proposed flagship rover for sustained exploration of the lunar south pole, a permanently shadowed region where Earth communication latency and extreme terrain make fully ground-directed operations impractical. The rover needs to execute multi-sol autonomous traverses, manage onboard faults and prioritise science objectives without constant uplink.\n\nThis Master's thesis at NASA's Jet Propulsion Laboratory designs the mission-level autonomy and execution layer sitting above the rover's subsystem controllers: a rolling-horizon task planner, dynamic replanning architecture and fault management integration, implemented within MissionSim, JPL's internal mission simulation framework. Supervised by Dr. Bandyopadhyay (JPL) and Prof. Leutenegger, Dr. Iovino and Dr. Kornfeld at ETH Zurich.",
+    skills: ["Mission Autonomy", "Task Planning", "Fault Management", "GNC", "Model Predictive Control", "Lunar Robotics", "MATLAB", "Python"],
+    keyDetails: [
+      { label: "Role", value: "Visiting Student Researcher (Master's thesis)" },
+      { label: "Period", value: "April – November 2026" },
+      { label: "Supervisors", value: "Dr. Saptarshi Bandyopadhyay (JPL) · Prof. Stefan Leutenegger (ETH)" },
+      { label: "Program", value: "Endurance Lunar Rover · NASA JPL" }
+    ],
+    heroPlaceholder: "01-hero.jpg",
+    heroImage: "media/01/01-hero.jpg",
+    galleryPlaceholders: ["01-2.jpg", "01-3.jpg", "01-4.jpg"],
+    galleryImages: ["media/01/01-2.jpg", "media/01/01-3.jpg", "media/01/01-4.jpg"],
+    featured: true
+  },
+  {
+    id: "02",
+    title: "Hermes Bi-Liquid Rocket",
+    subtitle: "ARIS ETH Zurich · Chief Engineer 2024–25",
+    badge: "2024–25",
+    tags: ["Project Management", "Systems Engineering", "Technical Leadership", "ARIS ETH"],
+    brief: "Led 50+ engineers through full bi-liquid rocket development from requirements through FRR.",
+    overview: "Hermes is ARIS's (ETH Rocket Team) first bi-liquid sounding rocket, a 5+ meter long vehicle with over 50 engineers across propulsion, structures, avionics and recovery. A bi-propellant liquid system introduces safety-critical complexity in propellant management, feed system design and ignition sequencing that demands rigorous systems-level coordination.\n\nAs Chief Engineer, my role went beyond management. On documentation, this meant writing the top-level system requirements and defining the relevant interfaces with my other SEs, designing team-wide templates to standardise how engineers captured design decisions and verification evidence, and driving requirement closure gates at every review milestone. In the field, this meant serving as test conductor for multiple engine torch ignitor tests, composite manufacturing qualification and structural test campaigns, as well as being the Assembly Lead for the propulsion, propellant supply system and avionics subsystems during the integration campaign and launch operations.",
+    skills: ["Systems Engineering", "Project Management", "Interface Management", "Requirements Engineering", "Verification Planning", "ECSS", "Bi-Liquid Propulsion", "Test Operations", "Vehicle Integration"],
+    keyDetails: [
+      { label: "Role", value: "Chief Engineer & Project Manager" },
+      { label: "Period", value: "August 2024 – October 2025" },
+      { label: "Scope", value: "Systems engineering, test operations and vehicle integration leadership" },
+      { label: "Program", value: "Hermes · ARIS ETH Zurich" }
+    ],
+    heroPlaceholder: "02-hero.jpg",
+    heroImage: "media/02/02-hero.jpg",
+    heroImagePosition: 'center bottom',
+    galleryPlaceholders: ["02-gallery-1.jpg", "02-gallery-2.jpg", "02-gallery-3.jpg"],
+    galleryImages: ["media/02/02-engine-test.jpg", "media/02/02-integration.png", "media/02/02-drop-test.png"],
+    featured: true
+  },
+  {
+    id: "03",
+    title: "Multi-Spacecraft Interferometry Simulator",
+    subtitle: "NASA JPL · Internship 2025–26",
+    badge: "Internship: 2025–26",
+    tags: ["GNC", "Orbital Dynamics", "Requirements Definition", "NASA JPL"],
+    brief: "End-to-end MATLAB simulation framework for a Pre-Phase A multi-spacecraft optical interferometry mission concept.",
+    overview: "Directly imaging exoplanets by combining light across free-flying spacecraft separated by tens to hundreds of metres demands relative positioning at the millimetre level and attitude alignment at the micro-arcsecond level. This was a Pre-Phase A mission concept study (NASA's earliest feasibility stage) evaluating architectures for concepts including TPF, SIM and ESA's LIFE.\n\nThe work built an end-to-end low-fidelity MATLAB simulation framework for orbital dynamics propagation, attitude dynamics and GNC across candidate formation configurations and instrument specifications. Using iterative trade and margin (ITM) analysis, preliminary L1/L2 mission requirements on relative navigation accuracy, delta-v budgets and metrology precision were derived from science objectives together with JPL Systems Engineers.",
+    skills: ["GNC", "Orbital Dynamics", "Interferometry", "Requirements Definition", "ITM Analysis", "Attitude Control", "MATLAB"],
+    keyDetails: [
+      { label: "Role", value: "Visiting Student Researcher" },
+      { label: "Period", value: "October 2025 – March 2026" },
+      { label: "Supervisors", value: "Dr. Saptarshi Bandyopadhyay (JPL) · Rashied Amini (JPL)" },
+      { label: "Program", value: "Pre-Phase A optical interferometer concept study · NASA JPL" }
+    ],
+    heroPlaceholder: "03-hero.jpg",
+    heroImage: "media/03/03-hero.jpeg",
+    galleryPlaceholders: ["03-gallery-1.jpg", "03-gallery-2.jpg", "03-gallery-3.jpg"],
+    galleryImages: ["media/03/03-dynamicsim.png", "media/03/03-halo-orbit.png", "media/03/03-photo.jpg"],
+    featured: false
+  },
+  {
+    id: "04",
+    title: "Cold-Gas Reaction Control System",
+    subtitle: "ETH Zurich · Semester Project 2025",
+    badge: "Semester Project: 2025",
+    tags: ["Propulsion", "ADCS", "Simulink", "ETH Zurich"],
+    brief: "CDR-ready cold-gas RCS design and attitude-control simulation for a 100 km suborbital rocket.",
+    overview: "A cold-gas reaction control system uses pressurised inert gas expelled through nozzles to generate attitude control moments, the simplest category of spacecraft thruster, but designing one to CDR-ready level for a 100 km suborbital rocket still requires closing the full engineering chain: requirements, architecture, propellant system sizing, structural verification and control law validation.\n\nThis semester project completed that chain solo. The propellant supply system was sized from mission-level pointing requirements, structural components verified analytically, and the attitude control loop implemented in Simulink using quaternion error dynamics with a bang-bang controller, including valve latency and propellant mass depletion modelling across the full flight envelope.",
+    skills: ["Cold-Gas RCS", "ADCS", "Bang-Bang Control", "Propellant Supply System Sizing", "Quaternion Dynamics", "Simulink", "MATLAB", "Systems Engineering"],
+    keyDetails: [
+      { label: "Role", value: "Systems Design Engineer (Semester Project)" },
+      { label: "Period", value: "February – June 2025" },
+      { label: "Supervisor", value: "Prof. Dr. Reza S. Abhari (ETH Zürich)" },
+      { label: "Scope", value: "CDR-ready cold-gas RCS and attitude-control simulation" }
+    ],
+    heroPlaceholder: "04-hero.jpg",
+    heroImage: "media/04/hero.png",
+    heroImageContain: true,
+    galleryPlaceholders: ["04-gallery-1.jpg", "04-gallery-2.jpg", "04-gallery-3.jpg"],
+    galleryImages: ["media/04/2.png", "media/04/3.png", "media/04/4.png"],
+    featured: false
+  },
+  {
+    id: "05",
+    title: "Supersonic Wind Tunnel",
+    subtitle: "EPFL · Bachelor Thesis 2024",
+    badge: "Bachelor Thesis: 2024",
+    tags: ["Nozzle Design", "FEA", "Compressible Fluid Dynamics", "EPFL"],
+    brief: "CDR-ready Mach 1.5–3 wind tunnel design for model rocket testing, including structural FEA and diffuser optimisation.",
+    overview: "Designing an in-house supersonic wind tunnel for the EPFL Rocket Team meant pushing a long-running concept study to a credible CDR-ready design for Mach 1.5 to 3 model rocket testing. The challenge was not just generating supersonic flow, but doing it cleanly enough for meaningful aerodynamic measurements while keeping the system manufacturable, structurally safe and economically realistic for a student team.\n\nAs project lead in the 4-student bachelor thesis team, my scope focused on the hardware-intensive parts of the system: structural design of the nozzle, test section and diffuser, FEA validation of the main assemblies, and optimisation of the supersonic diffuser to improve pressure recovery and reduce reservoir pressure requirements. The final deliverable was a full CDR package combining CAD, analysis-backed design decisions, operating concept and cost estimation for a complete EPFL wind tunnel concept.",
+    skills: ["Compressible Flow", "Nozzle Design", "Supersonic Diffuser Design", "FEA", "CFD", "Structural Design", "System Design"],
+    keyDetails: [
+      { label: "Role", value: "Project Lead (Bachelor Thesis)" },
+      { label: "Period", value: "February – June 2024" },
+      { label: "Supervisor", value: "Prof. Dr. Flavio Nocca (EPFL)" },
+      { label: "Scope", value: "Nozzle, test section, diffuser, FEA and system design" }
+    ],
+    heroPlaceholder: "05-hero.jpg",
+    heroImage: "media/05/hero.png",
+    heroImageContain: true,
+    galleryPlaceholders: ["05-gallery-1.jpg", "05-gallery-2.jpg", "05-gallery-3.jpg"],
+    galleryImages: ["media/05/3.png", "media/05/2.png", "media/05/05-cfd.png"],
+    featured: false
+  },
+  {
+    id: "06",
+    title: "Firehorn Recovery Subsystem",
+    subtitle: "ERT EPFL · Subsystem Team Lead 2024",
+    badge: "2024",
+    tags: ["Parachute Recovery", "Pyrotechnics", "Requirements", "ERT EPFL"],
+    brief: "Dual-event recovery system and first-iteration pyrotechnic reefing-line cutter for Firehorn, built from scratch with no prior team heritage.",
+    overview: "Firehorn's recovery system uses a dual-event descent: drogue at apogee, followed by a reefed main parachute with a pyrotechnic reefing-line cutter releasing at lower altitude. Designing this for a first-generation cryogenic bi-liquid rocket of the EPFL Rocket Team (ERT) meant building from scratch with no prior team heritage on this architecture.\n\nAs Recovery Team Lead for the first year of development, a 6-person team was coordinated through requirements derivation, interface definition with avionics and structures, and preliminary design. The most technically demanding contribution was the first iteration of the reefing-line pyro cutter, a custom device that fires at altitude, severs a loaded Dyneema line and avoids shrapnel risk to adjacent components. Design and requirements reviews were run, and a full verification plan handed over to the Year 2 team.",
+    skills: ["Recovery Systems", "Parachute Design", "Pyrotechnics", "Interface Management", "Requirements Engineering", "Verification Planning"],
+    keyDetails: [
+      { label: "Role", value: "Recovery Team Lead" },
+      { label: "Period", value: "February – August 2024" },
+      { label: "Scope", value: "Requirements, interfaces, pyro cutter, parachute design and verification planning" },
+      { label: "Program", value: "Firehorn · ERT EPFL" }
+    ],
+    heroPlaceholder: "06-hero.jpg",
+    heroImage: "media/06/06-hero.jpg",
+    heroImageContain: true,
+    galleryPlaceholders: ["06-gallery-1.jpg", "06-gallery-2.jpg", "06-gallery-3.jpg"],
+    galleryImages: ["media/06/06-system-layout.jpg", "media/06/06-coupler.jpg", "media/06/06-final.jpg"],
+    featured: false
+  },
+  {
+    id: "07",
+    title: "Firehorn Engine Bay",
+    subtitle: "ERT EPFL · Structural Engineer 2023–24",
+    badge: "2023–24",
+    tags: ["FEA", "Topology Optimisation", "Additive Manufacturing", "ERT EPFL"],
+    brief: "Thrust plate design, topology optimisation and full FEA of the most mechanically loaded section of Firehorn.",
+    overview: "Firehorn's engine bay carries the engine, feed lines, thrust plate and boattail, making it one of the most mechanically loaded sections of the rocket, subject to combined axial thrust, dynamic pressure, thermal gradients from the plume and fastener preloads throughout.\n\nAs the lead structural engineer of this section in the first year of development, the thrust plate was designed from scratch for 6-axis CNC machining, then put through topology optimisation in Al 2050 to strip mass while holding margins. A generative design study explored additive manufacturing variants in parallel. The CFRP boattail was verified under anisotropic shock impact in ANSYS, and a full FEA of the assembled bay (thrust plate, transition frames, plumbing attachment points and rocket internal structure) closed all structural margins.",
+    skills: ["Structural Design", "FEA", "Additive Manufacturing", "Topology Optimization", "ANSYS", "CFRP Structures", "Generative Design", "CNC Design"],
+    keyDetails: [
+      { label: "Role", value: "Structural Engineer" },
+      { label: "Period", value: "September 2023 – August 2024" },
+      { label: "Scope", value: "Thrust plate, boattail, attachments, FEA and optimisation" },
+      { label: "Program", value: "Firehorn · ERT EPFL" }
+    ],
+    heroPlaceholder: "07-hero.jpg",
+    heroImage: "media/07/07-hero.png",
+    heroImageContain: true,
+    galleryPlaceholders: ["07-gallery-1.jpg", "07-gallery-2.jpg", "07-gallery-3.jpg"],
+    galleryImages: ["media/07/07-2.png", "media/07/07-3.png", "media/07/07-4.png"],
+    galleryImagesContain: [false, false, false],
+    featured: false
+  },
+  {
+    id: "08",
+    title: "Nordend Payload Bay",
+    subtitle: "ERT EPFL · Structural Engineer 2022–23",
+    badge: "2022–23",
+    tags: ["Structural Design", "CFRP Lamination", "Integration", "ERT EPFL"],
+    brief: "Structural design and CFRP lamination of the payload bay and nosecone for the Nordend sounding rocket.",
+    overview: "Nordend's nosecone had to fit a 3U CubeSat (141.42 mm diagonal) inside a slide-in section with only 149.51 mm of internal diameter, making the Payload Integration Structure one of the most constrained components on the vehicle under strict EuRoC mass limits. The PIS evolved to a final PA6-CF 3D-printed plate configuration with metal rod guiding rails, sized to survive launch acceleration and chute deployment loads verified by von Mises FEA. PETG was tested and rejected for insufficient rigidity at rod attachment corners; PA6-CF retained printability while resolving the stiffness problem.\n\nBeyond the PIS, the tangent-ogive nosecone shape was co-designed with the flight dynamics team and optimised for Nordend's supersonic speed regime and hand-laminated in CFRP, with only the removable tip printed in PA6-CF, giving direct hands-on composite manufacturing experience alongside the structural analysis work.",
+    skills: ["Structural Design", "3D Printing", "SolidWorks", "Payload Integration", "Nosecone Design", "CFRP Lamination", "FEA"],
+    keyDetails: [
+      { label: "Role", value: "Structural Engineer" },
+      { label: "Period", value: "September 2022 – September 2023" },
+      { label: "Scope", value: "Payload integration structure, nosecone co-design and CFRP lamination" },
+      { label: "Program", value: "Nordend · ERT EPFL" }
+    ],
+    heroPlaceholder: "08-hero.jpg",
+    heroImage: "media/08/08-hero-new.png",
+    galleryPlaceholders: ["08-gallery-1.jpg", "08-gallery-2.jpg", "08-gallery-3.jpg"],
+    galleryImages: ["media/08/08-2.jpg", "media/08/08-hero.jpg", "media/08/08-4.png"],
+    galleryImagesContain: [true, false, false],
+    featured: false
+  },
+  {
+    id: "09",
+    title: "Anti-Buckling Ring FEA",
+    subtitle: "EPFL · ME-373 Coursework · 2024",
+    badge: "2024",
+    tags: ["FEA", "Mesh Convergence", "Stress Analysis", "EPFL Coursework"],
+    brief: "Full Abaqus verification campaign for Firehorn's anti-buckling rings across three load cases, with sub-1% stress convergence.",
+    overview: "Firehorn's internal structure is a CFRP and aluminium skeleton whose four longitudinal CFRP rods carry the Max-Q compressive load and would otherwise buckle. Anti-Buckling Rings, tubular Aluminium 2050-T84 parts with four oblong rod holes and M10 preloaded clamps, are bolted along the rods to add buckling nodes and shorten the effective column length. This ME-373 project was a full Abaqus campaign verifying the ABR against three load cases in the elastic regime: radial buckling reaction, anti-radial buckling reaction and the screw preload at assembly.\n\nDefined the load cases with my partner, including the trigonometric conversion of the structures team's 2 kN rod reaction into a pressure pair on a quarter-ring model with the rod treated as infinitely rigid. Exploited quadri-symmetry, built a hybrid mesh (quadratic tets in the complex central cells, linear wedges in the simple tubular cells) with targeted local refinement, and ran a six-configuration convergence study locking in sub-1% stress error against the converged benchmark. All three cases cleared, with margins of safety of 0.23, 1.72 and 0.74, and displacements well below the 2% rod-length buckling criterion.",
+    skills: ["Abaqus CAE", "FEA", "Mesh Convergence", "Stress Analysis", "Structural Verification"],
+    keyDetails: [
+      { label: "Focus", value: "Abaqus FEA and mesh convergence" },
+      { label: "Course", value: "ME-373: Finite Element Modelling and Simulation · EPFL · 2024" },
+      { label: "Context", value: "Quarter-symmetry verification of Firehorn anti-buckling ring" },
+      { label: "Outcome", value: "Three load cases closed with converged stresses and positive margins" }
+    ],
+    heroPlaceholder: "09-hero.jpg",
+    heroImage: "media/09/09-hero.png",
+    heroImageContain: true,
+    galleryPlaceholders: ["09-gallery-1.jpg", "09-gallery-2.jpg", "09-gallery-3.jpg"],
+    galleryImages: ["media/09/09-2.png", "media/09/09-3.png", "media/09/09-4.png"],
+    galleryImagesContain: [false, true, true],
+    featured: false,
+    coursework: true
+  },
+  {
+    id: "10",
+    title: "Multi-Sensor Heating Tank",
+    subtitle: "EPFL · ME-301 Coursework · 2024",
+    badge: "2024",
+    tags: ["Sensor Fusion", "FFT Analysis", "Thermal Modelling", "EPFL Coursework"],
+    brief: "Arduino-based thermal measurement rig with IR array, humidity and Hall sensing, achieving 0.28°C mean absolute error against the lumped-capacitance model.",
+    overview: "ME-301 (Measurement Techniques) project characterizing the heating and cooling dynamics of a small acrylic water reservoir under fan-forced convection, with the emphasis explicitly on the measurement chain rather than the thermal physics. The setup is instrumented end to end on an Arduino UNO with three sensors: an AMG8833 8×8 IR grid array reading the water surface as 64 thermal pixels, an Si7021 humidity and air temperature sensor and a SS441A Hall-effect sensor reading fan RPM, running a 5 min heat / 5 min cool cycle repeated five times for repeatability.\n\nDesigned and printed the custom fixtures mounting the sensors and fan, wrote the Arduino firmware for the IR grid and the Si7021, and built the heatmap signal processing (per-frame visualisation plus an averaged scalar built only from the surface pixels, with the outer pixels kept as a side-channel diagnostic of conduction losses through the acrylic). Implemented FFT analysis on the post-fan segment to detect the 27.5 Hz fan rotation signature, and derived the heating ramp-up and lumped-capacitance cooling model used for the experiment-vs-theory comparison, which matched the measured average temperature with a Mean Absolute Error of 0.281°C across the full run.",
+    skills: ["Sensor Fusion", "FFT Analysis", "Experimental Validation", "Thermal Modelling", "Arduino", "Signal Processing"],
+    keyDetails: [
+      { label: "Focus", value: "Sensor fusion, FFT and thermal modelling" },
+      { label: "Course", value: "ME-301: Measurement Techniques · EPFL · 2024" },
+      { label: "Context", value: "Arduino-based thermal measurement with IR array, humidity and Hall sensing" },
+      { label: "Outcome", value: "0.28°C mean absolute error against experiment" }
+    ],
+    heroPlaceholder: "10-hero.jpg",
+    heroImage: "media/10/10-hero.png",
+    galleryPlaceholders: ["10-gallery-1.jpg", "10-gallery-2.jpg", "10-gallery-3.jpg"],
+    galleryImages: ["media/10/10-02.png", "media/10/10-3.png", "media/10/10-4.png"],
+    galleryImagesContain: [true, true, true],
+    featured: false,
+    coursework: true
+  },
+  {
+    id: "11",
+    title: "Gripper Design & Testing",
+    subtitle: "EPFL · ME-320 Coursework · 2023",
+    badge: "2023",
+    tags: ["Mechanism Design", "Prototyping", "EPFL Coursework"],
+    brief: "Pivot Grappler robotic end-effector designed through structured concept selection, built FDM and validated for 0–0.7 kg object grasping with contact-based object-type detection.",
+    overview: "Concept generation, selection and prototyping of a robotic end-effector for an educational manipulator, sized to autonomously detect, grasp, lift, hold and release food and non-food objects up to 0.7 kg, with object-type identification driving an adaptive grip force under Arduino control. Four architectures (axial bucket, vacuum, three-point, pivot grappler) were scored through a structured weighted decision matrix on simplicity, flexibility, manufacturability and performance.\n\nProposed and developed the Pivot Grappler concept that won the selection: two interlaced stacks of flexible claws pivoting on a 10 mm rod, actuated by a single stepper through cables to M8 threaded rods, with magnetic sensing integrated inside the claw assembly for object-type detection. Defined the full mechanical architecture (chassis, pivot, gear train, robot interface) and drove the choices that made it FDM-friendly: hollowed claws for compliance, 5 mm spacing to grip a sunflower seed and a fully bolted assembly for repairability. When the magnetic sensor proved unreliable on the bench, pivoted to a two-strip conductive-tape contact sensor closing through an LED, tuned so the closed gripper does not short on itself, and used it during the demo to identify a knife and a fork.",
+    skills: ["Mechanism Design", "Prototype Development", "SolidWorks", "Testing", "FDM Manufacturing"],
+    keyDetails: [
+      { label: "Focus", value: "Mechanism design and prototype development" },
+      { label: "Course", value: "ME-320: Mechanisms and Robotics · EPFL · 2023" },
+      { label: "Context", value: "Robotic end-effector for 0–0.7 kg adaptive grasping" },
+      { label: "Outcome", value: "Pivot Grappler selected, built and validated with contact-based object detection" }
+    ],
+    heroPlaceholder: "11-hero.jpg",
+    heroImage: "media/11/11-hero.png",
+    galleryPlaceholders: [],
+    featured: false,
+    coursework: true
+  },
+  {
+    id: "12",
+    title: "Mechanical Carrot Peeler",
+    subtitle: "EPFL · ME-102 Coursework · 2022",
+    badge: "2022",
+    tags: ["Product Design", "Mechanism Design", "EPFL Coursework"],
+    brief: "First-year mechanical design project taken from force testing to full 2D drawings of a spiral peeling machine.",
+    overview: "Four-student first-year mechanical construction project to design a domestic carrot peeler from scratch, from cahier des charges to full 2D drawings. Characterized peeling forces experimentally on a kitchen scale (approximately 15.4 N perpendicular to the carrot axis), then traded two architectures: a One Shot push-through concept and a Spiral concept (carrot rotated horizontally while two spring-loaded blades translate axially, producing helical peelings). The Spiral won on footprint and complexity and was taken to full mechanical design with compression-spring loaded blades, a manual clutch return and aluminium 5005 structural parts. First full mechanical product loop owned end to end.",
+    skills: ["Product Design", "Mechanism Design", "2D Technical Drawing", "Prototype Development", "Testing", "SolidWorks"],
+    keyDetails: [
+      { label: "Focus", value: "Product design and mechanism development" },
+      { label: "Course", value: "ME-102: Mechanical Construction II · EPFL · 2022" },
+      { label: "Context", value: "4-student first-year mechanical design project" },
+      { label: "Outcome", value: "From force testing to full 2D mechanical design of final concept" }
+    ],
+    heroPlaceholder: "12-hero.jpg",
+    heroImage: "media/12/12-hero.png",
+    heroImageContain: true,
+    galleryPlaceholders: ["12-gallery-1.jpg", "12-gallery-2.jpg", "12-gallery-3.jpg"],
+    galleryImages: ["media/12/12-2.png", "media/12/12-3.png", "media/12/12-4.png"],
+    galleryImagesContain: [true, true, true],
+    featured: false,
+    coursework: true
+  }
+];
+
+export default projects;
