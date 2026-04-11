@@ -777,7 +777,7 @@ a.contact-value:hover { color: var(--accent); }
 /* ── Ongoing tag ─────────────────────────────────────────── */
 .card-title-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   margin-bottom: 4px;
 }
