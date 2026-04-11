@@ -7,7 +7,7 @@ export default function Nav() {
           <li><a href="#projects">Work</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a className="nav-cv" href="/pablo-scherpereel-portfolio/media/CV_Pablo_Scherpereel_Arce.pdf" target="_blank" rel="noreferrer">CV ↗</a>
+        <a className="nav-cv" href={`${import.meta.env.BASE_URL}media/CV_Pablo_Scherpereel_Arce.pdf`} target="_blank" rel="noreferrer">CV ↗</a>
       </div>
     </nav>
   )
