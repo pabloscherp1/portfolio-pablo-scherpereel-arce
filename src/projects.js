@@ -170,6 +170,7 @@ const projects = [
     ],
     heroPlaceholder: "08-hero.jpg",
     heroImage: "media/08/08-hero.jpg",
+    heroImageContain: true,
     galleryPlaceholders: ["08-gallery-1.jpg", "08-gallery-2.jpg", "08-gallery-3.jpg"],
     galleryImages: ["media/08/08-2.png", "media/08/08-4.png", "media/08/08-3.png"],
     galleryImagesContain: [false, false, false],
