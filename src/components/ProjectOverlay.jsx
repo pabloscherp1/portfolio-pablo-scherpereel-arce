@@ -127,13 +127,13 @@ export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPr
             </div>
 
             <div className="overlay-right">
-              <p className="overlay-badge">{project.badge}</p>
-              <div className="overlay-title-row">
-                <h1 className="overlay-title">{project.title}</h1>
+              <div className="overlay-badge-row">
+                <p className="overlay-badge">{project.badge}</p>
                 {project.ongoing && (
                   <span className="ongoing-tag"><span className="ongoing-dot" />Ongoing</span>
                 )}
               </div>
+              <h1 className="overlay-title">{project.title}</h1>
               <p className="overlay-subtitle">{project.subtitle}</p>
               <p className="overlay-overview">{project.overview}</p>
               <p className="overlay-details-title">Key Details</p>
