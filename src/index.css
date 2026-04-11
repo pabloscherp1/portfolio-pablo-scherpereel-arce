@@ -775,9 +775,19 @@ a.contact-value:hover { color: var(--accent); }
 .overlay-img-clickable:hover { opacity: 0.88; }
 
 /* ── Ongoing tag ─────────────────────────────────────────── */
+.card-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card-badge-row .card-badge {
+  margin-bottom: 0;
+}
+
 .ongoing-tag {
   display: inline-flex;
-  align-self: flex-start;
   align-items: center;
   gap: 6px;
   font-family: 'IBM Plex Mono', monospace;
@@ -789,7 +799,6 @@ a.contact-value:hover { color: var(--accent); }
   border: 1px solid var(--accent);
   border-radius: 2px;
   padding: 3px 8px 3px 6px;
-  margin-bottom: 12px;
 }
 
 .ongoing-dot {
