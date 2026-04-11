@@ -32,7 +32,19 @@ function Lightbox({ src, alt, onClose }) {
   )
 }
 
-export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPrev, hasNext, currentIndex, total }) {
+const overlayVariants = {
+  initial: (dir) => ({
+    y: dir === 0 ? '100%' : 0,
+    x: dir === 1 ? '100%' : dir === -1 ? '-100%' : 0,
+  }),
+  animate: { y: 0, x: 0 },
+  exit: (dir) => ({
+    y: dir === 0 ? '100%' : 0,
+    x: dir === 1 ? '-100%' : dir === -1 ? '100%' : 0,
+  }),
+}
+
+export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPrev, hasNext, currentIndex, total, direction = 0 }) {
   const [lightboxSrc, setLightboxSrc] = useState(null)
   const [lightboxAlt, setLightboxAlt] = useState('')
 
@@ -58,9 +70,11 @@ export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPr
     <>
       <motion.div
         className="overlay"
-        initial={{ y: '100%' }}
-        animate={{ y: 0 }}
-        exit={{ y: '100%' }}
+        custom={direction}
+        variants={overlayVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
         transition={{ type: 'spring', stiffness: 280, damping: 32 }}
       >
         <div className="overlay-header">

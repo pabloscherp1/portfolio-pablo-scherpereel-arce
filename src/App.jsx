@@ -9,15 +9,17 @@ import projects from './projects'
 
 export default function App() {
   const [overlayIndex, setOverlayIndex] = useState(null)
+  const [direction, setDirection] = useState(0)
 
   const openProject = (project) => {
+    setDirection(0)
     setOverlayIndex(projects.findIndex((p) => p.id === project.id))
   }
 
   const closeOverlay = () => setOverlayIndex(null)
 
-  const goPrev = () => setOverlayIndex((i) => Math.max(0, i - 1))
-  const goNext = () => setOverlayIndex((i) => Math.min(projects.length - 1, i + 1))
+  const goPrev = () => { setDirection(-1); setOverlayIndex((i) => Math.max(0, i - 1)) }
+  const goNext = () => { setDirection(1);  setOverlayIndex((i) => Math.min(projects.length - 1, i + 1)) }
 
   return (
     <>
@@ -28,7 +30,7 @@ export default function App() {
         <About />
       </main>
 
-      <AnimatePresence>
+      <AnimatePresence custom={direction}>
         {overlayIndex !== null && (
           <ProjectOverlay
             key={overlayIndex}
@@ -40,6 +42,7 @@ export default function App() {
             hasNext={overlayIndex < projects.length - 1}
             currentIndex={overlayIndex}
             total={projects.length}
+            direction={direction}
           />
         )}
       </AnimatePresence>
