@@ -775,14 +775,14 @@ a.contact-value:hover { color: var(--accent); }
 .overlay-img-clickable:hover { opacity: 0.88; }
 
 /* ── Ongoing tag ─────────────────────────────────────────── */
-.card-badge-row {
+.card-title-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
 }
 
-.card-badge-row .card-badge {
+.card-title-row .card-title {
   margin-bottom: 0;
 }
 

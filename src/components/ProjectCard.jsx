@@ -40,13 +40,13 @@ export default function ProjectCard({ project, variant = 'regular', onClick, del
         </div>
       )}
 
-      <div className="card-badge-row">
-        <p className="card-badge">{project.badge}</p>
+      <p className="card-badge">{project.badge}</p>
+      <div className="card-title-row">
+        <h2 className="card-title">{project.title}</h2>
         {project.ongoing && (
           <span className="ongoing-tag"><span className="ongoing-dot" />Ongoing</span>
         )}
       </div>
-      <h2 className="card-title">{project.title}</h2>
       <p className="card-subtitle">{project.subtitle}</p>
 
       <div className="card-tags">
