@@ -777,6 +777,7 @@ a.contact-value:hover { color: var(--accent); }
 /* ── Ongoing tag ─────────────────────────────────────────── */
 .ongoing-tag {
   display: inline-flex;
+  align-self: flex-start;
   align-items: center;
   gap: 6px;
   font-family: 'IBM Plex Mono', monospace;
