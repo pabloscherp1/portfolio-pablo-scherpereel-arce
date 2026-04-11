@@ -2,8 +2,8 @@ const projects = [
   {
     id: "01",
     title: "Endurance Lunar Rover",
-    subtitle: "NASA JPL · Master's Thesis 2026",
-    badge: "Master's Thesis: 2026",
+    subtitle: "NASA JPL · Master's Thesis",
+    badge: "2026",
     tags: ["Mission Autonomy", "Task Planning", "Fault Management", "NASA JPL"],
     brief: "Mission-level autonomy architecture and execution layer for NASA's Endurance lunar rover.",
     overview: "Endurance is NASA's proposed flagship rover for sustained exploration of the lunar south pole, a permanently shadowed region where Earth communication latency and extreme terrain make fully ground-directed operations impractical. The rover needs to execute multi-sol autonomous traverses, manage onboard faults and prioritise science objectives without constant uplink.\n\nThis Master's thesis at NASA's Jet Propulsion Laboratory designs the mission-level autonomy and execution layer sitting above the rover's subsystem controllers: a rolling-horizon task planner, dynamic replanning architecture and fault management integration, implemented within MissionSim, JPL's internal mission simulation framework. Supervised by Dr. Bandyopadhyay (JPL) and Prof. Leutenegger, Dr. Iovino and Dr. Kornfeld at ETH Zurich.",
@@ -24,7 +24,7 @@ const projects = [
   {
     id: "02",
     title: "Hermes Bi-Liquid Rocket",
-    subtitle: "ARIS ETH Zurich · Chief Engineer 2024–25",
+    subtitle: "ARIS ETH Zurich · Chief Engineer",
     badge: "2024–25",
     tags: ["Project Management", "Systems Engineering", "Technical Leadership", "ARIS ETH"],
     brief: "Led 50+ engineers through full bi-liquid rocket development from requirements through FRR.",
@@ -46,8 +46,8 @@ const projects = [
   {
     id: "03",
     title: "Multi-Spacecraft Interferometry Simulator",
-    subtitle: "NASA JPL · Internship 2025–26",
-    badge: "Internship: 2025–26",
+    subtitle: "NASA JPL · Internship",
+    badge: "2025–26",
     tags: ["GNC", "Orbital Dynamics", "Requirements Definition", "NASA JPL"],
     brief: "End-to-end MATLAB simulation framework for a Pre-Phase A multi-spacecraft optical interferometry mission concept.",
     overview: "Directly imaging exoplanets by combining light across free-flying spacecraft separated by tens to hundreds of metres demands relative positioning at the millimetre level and attitude alignment at the micro-arcsecond level. This was a Pre-Phase A mission concept study (NASA's earliest feasibility stage) evaluating architectures for concepts including TPF, SIM and ESA's LIFE.\n\nThe work built an end-to-end low-fidelity MATLAB simulation framework for orbital dynamics propagation, attitude dynamics and GNC across candidate formation configurations and instrument specifications. Using iterative trade and margin (ITM) analysis, preliminary L1/L2 mission requirements on relative navigation accuracy, delta-v budgets and metrology precision were derived from science objectives together with JPL Systems Engineers.",
@@ -67,8 +67,8 @@ const projects = [
   {
     id: "04",
     title: "Cold-Gas Reaction Control System",
-    subtitle: "ETH Zurich · Semester Project 2025",
-    badge: "Semester Project: 2025",
+    subtitle: "ETH Zurich · Semester Project",
+    badge: "2025",
     tags: ["Propulsion", "ADCS", "Simulink", "ETH Zurich"],
     brief: "CDR-ready cold-gas RCS design and attitude-control simulation for a 100 km suborbital rocket.",
     overview: "A cold-gas reaction control system uses pressurised inert gas expelled through nozzles to generate attitude control moments, the simplest category of spacecraft thruster, but designing one to CDR-ready level for a 100 km suborbital rocket still requires closing the full engineering chain: requirements, architecture, propellant system sizing, structural verification and control law validation.\n\nThis semester project completed that chain solo. The propellant supply system was sized from mission-level pointing requirements, structural components verified analytically, and the attitude control loop implemented in Simulink using quaternion error dynamics with a bang-bang controller, including valve latency and propellant mass depletion modelling across the full flight envelope.",
@@ -89,8 +89,8 @@ const projects = [
   {
     id: "05",
     title: "Supersonic Wind Tunnel",
-    subtitle: "EPFL · Bachelor Thesis 2024",
-    badge: "Bachelor Thesis: 2024",
+    subtitle: "EPFL · Bachelor Thesis",
+    badge: "2024",
     tags: ["Nozzle Design", "FEA", "Compressible Fluid Dynamics", "EPFL"],
     brief: "CDR-ready Mach 1.5–3 wind tunnel design for model rocket testing, including structural FEA and diffuser optimisation.",
     overview: "Designing an in-house supersonic wind tunnel for the EPFL Rocket Team meant pushing a long-running concept study to a credible CDR-ready design for Mach 1.5 to 3 model rocket testing. The challenge was not just generating supersonic flow, but doing it cleanly enough for meaningful aerodynamic measurements while keeping the system manufacturable, structurally safe and economically realistic for a student team.\n\nAs project lead in the 4-student bachelor thesis team, my scope focused on the hardware-intensive parts of the system: structural design of the nozzle, test section and diffuser, FEA validation of the main assemblies, and optimisation of the supersonic diffuser to improve pressure recovery and reduce reservoir pressure requirements. The final deliverable was a full CDR package combining CAD, analysis-backed design decisions, operating concept and cost estimation for a complete EPFL wind tunnel concept.",
@@ -111,7 +111,7 @@ const projects = [
   {
     id: "06",
     title: "Firehorn Recovery Subsystem",
-    subtitle: "ERT EPFL · Subsystem Team Lead 2024",
+    subtitle: "ERT EPFL · Subsystem Team Lead",
     badge: "2024",
     tags: ["Parachute Recovery", "Pyrotechnics", "Requirements", "ERT EPFL"],
     brief: "Dual-event recovery system and first-iteration pyrotechnic reefing-line cutter for Firehorn, built from scratch with no prior team heritage.",
@@ -133,7 +133,7 @@ const projects = [
   {
     id: "07",
     title: "Firehorn Engine Bay",
-    subtitle: "ERT EPFL · Structural Engineer 2023–24",
+    subtitle: "ERT EPFL · Structural Engineer",
     badge: "2023–24",
     tags: ["FEA", "Topology Optimisation", "Additive Manufacturing", "ERT EPFL"],
     brief: "Thrust plate design, topology optimisation and full FEA of the most mechanically loaded section of Firehorn.",
@@ -156,7 +156,7 @@ const projects = [
   {
     id: "08",
     title: "Nordend Payload Bay",
-    subtitle: "ERT EPFL · Structural Engineer 2022–23",
+    subtitle: "ERT EPFL · Structural Engineer",
     badge: "2022–23",
     tags: ["Structural Design", "CFRP Lamination", "Integration", "ERT EPFL"],
     brief: "Structural design and CFRP lamination of the payload bay and nosecone for the Nordend sounding rocket.",
@@ -178,7 +178,7 @@ const projects = [
   {
     id: "09",
     title: "Anti-Buckling Ring FEA",
-    subtitle: "EPFL · ME-373 Coursework · 2024",
+    subtitle: "EPFL · ME-373 Coursework",
     badge: "2024",
     tags: ["FEA", "Mesh Convergence", "Stress Analysis", "EPFL Coursework"],
     brief: "Full Abaqus verification campaign for Firehorn's anti-buckling rings across three load cases, with sub-1% stress convergence.",
@@ -202,7 +202,7 @@ const projects = [
   {
     id: "10",
     title: "Multi-Sensor Heating Tank",
-    subtitle: "EPFL · ME-301 Coursework · 2024",
+    subtitle: "EPFL · ME-301 Coursework",
     badge: "2024",
     tags: ["Sensor Fusion", "FFT Analysis", "Thermal Modelling", "EPFL Coursework"],
     brief: "Arduino-based thermal measurement rig with IR array, humidity and Hall sensing, achieving 0.28°C mean absolute error against the lumped-capacitance model.",
@@ -225,7 +225,7 @@ const projects = [
   {
     id: "11",
     title: "Gripper Design & Testing",
-    subtitle: "EPFL · ME-320 Coursework · 2023",
+    subtitle: "EPFL · ME-320 Coursework",
     badge: "2023",
     tags: ["Mechanism Design", "Prototyping", "EPFL Coursework"],
     brief: "Pivot Grappler robotic end-effector designed through structured concept selection, built FDM and validated for 0–0.7 kg object grasping with contact-based object-type detection.",
@@ -246,7 +246,7 @@ const projects = [
   {
     id: "12",
     title: "Mechanical Carrot Peeler",
-    subtitle: "EPFL · ME-102 Coursework · 2022",
+    subtitle: "EPFL · ME-102 Coursework",
     badge: "2022",
     tags: ["Product Design", "Mechanism Design", "EPFL Coursework"],
     brief: "First-year mechanical design project taken from force testing to full 2D drawings of a spiral peeling machine.",
