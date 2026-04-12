@@ -1,12 +1,21 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-function Lightbox({ src, alt, onClose }) {
+function Lightbox({ images, index, onClose, onNavigate }) {
+  const src = images[index]?.src
+  const alt = images[index]?.alt
+  const hasPrev = index > 0
+  const hasNext = index < images.length - 1
+
   useEffect(() => {
-    const handler = (e) => { if (e.key === 'Escape') onClose() }
+    const handler = (e) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowLeft' && hasPrev) onNavigate(index - 1)
+      if (e.key === 'ArrowRight' && hasNext) onNavigate(index + 1)
+    }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [onClose])
+  }, [onClose, onNavigate, index, hasPrev, hasNext])
 
   return (
     <motion.div
@@ -17,7 +26,11 @@ function Lightbox({ src, alt, onClose }) {
       transition={{ duration: 0.18 }}
       onClick={onClose}
     >
+      {hasPrev && (
+        <button className="lightbox-arrow lightbox-arrow-left" onClick={(e) => { e.stopPropagation(); onNavigate(index - 1) }}>←</button>
+      )}
       <motion.img
+        key={src}
         src={src}
         alt={alt}
         className="lightbox-img"
@@ -27,6 +40,9 @@ function Lightbox({ src, alt, onClose }) {
         transition={{ duration: 0.2 }}
         onClick={(e) => e.stopPropagation()}
       />
+      {hasNext && (
+        <button className="lightbox-arrow lightbox-arrow-right" onClick={(e) => { e.stopPropagation(); onNavigate(index + 1) }}>→</button>
+      )}
       <button className="lightbox-close" onClick={onClose}>✕</button>
     </motion.div>
   )
@@ -45,20 +61,28 @@ const overlayVariants = {
 }
 
 export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPrev, hasNext, currentIndex, total, direction = 0 }) {
-  const [lightboxSrc, setLightboxSrc] = useState(null)
-  const [lightboxAlt, setLightboxAlt] = useState('')
+  const [lightboxIndex, setLightboxIndex] = useState(null)
 
-  const openLightbox = (src, alt) => { setLightboxSrc(src); setLightboxAlt(alt) }
-  const closeLightbox = () => setLightboxSrc(null)
+  const lightboxImages = [
+    ...(project.heroImage ? [{ src: `${import.meta.env.BASE_URL}${project.heroImage}`, alt: project.title }] : []),
+    ...(project.galleryPlaceholders
+      .map((_, i) => project.galleryImages?.[i]
+        ? { src: `${import.meta.env.BASE_URL}${project.galleryImages[i]}`, alt: `${project.title} ${i + 1}` }
+        : null)
+      .filter(Boolean))
+  ]
+
+  const openLightbox = (index) => setLightboxIndex(index)
+  const closeLightbox = () => setLightboxIndex(null)
 
   // Escape — close lightbox first, then overlay
   useEffect(() => {
     const handler = (e) => {
-      if (e.key === 'Escape') { if (lightboxSrc) closeLightbox(); else onClose() }
+      if (e.key === 'Escape') { if (lightboxIndex !== null) closeLightbox(); else onClose() }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [onClose, lightboxSrc])
+  }, [onClose, lightboxIndex])
 
   // Lock body scroll
   useEffect(() => {
@@ -95,7 +119,7 @@ export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPr
                       alt={project.title}
                       className={`overlay-img-real overlay-img-clickable${project.heroImageContain ? ' overlay-img-contain' : ''}`}
                       style={project.heroImagePosition ? { objectPosition: project.heroImagePosition } : undefined}
-                      onClick={() => openLightbox(`${import.meta.env.BASE_URL}${project.heroImage}`, project.title)}
+                      onClick={() => openLightbox(0)}
                     />
                   : <div className="img-placeholder">[Add image — filename: {project.heroPlaceholder}]</div>
                 }
@@ -106,13 +130,14 @@ export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPr
                   const src = project.galleryImages?.[i]
                   const fullSrc = src ? `${import.meta.env.BASE_URL}${src}` : null
                   const contain = project.galleryImagesContain?.[i]
+                  const lightboxIdx = project.heroImage ? i + 1 : i
                   return fullSrc
                     ? <img
                         key={filename}
                         src={fullSrc}
                         alt={`${project.title} ${i + 1}`}
                         className={`overlay-img-real overlay-img-clickable${contain ? ' overlay-img-contain' : ''}`}
-                        onClick={() => openLightbox(fullSrc, `${project.title} ${i + 1}`)}
+                        onClick={() => openLightbox(lightboxIdx)}
                         onError={e => { e.currentTarget.style.display = 'none' }}
                       />
                     : null
@@ -163,7 +188,14 @@ export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPr
       </motion.div>
 
       <AnimatePresence>
-        {lightboxSrc && <Lightbox src={lightboxSrc} alt={lightboxAlt} onClose={closeLightbox} />}
+        {lightboxIndex !== null && (
+          <Lightbox
+            images={lightboxImages}
+            index={lightboxIndex}
+            onClose={closeLightbox}
+            onNavigate={setLightboxIndex}
+          />
+        )}
       </AnimatePresence>
     </>
   )

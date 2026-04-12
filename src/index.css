@@ -778,6 +778,26 @@ a.contact-value:hover { color: var(--accent); }
 
 .lightbox-close:hover { color: #fff; }
 
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 12px 20px;
+  line-height: 1;
+  transition: color 0.15s;
+  user-select: none;
+}
+
+.lightbox-arrow:hover { color: #fff; }
+
+.lightbox-arrow-left { left: 16px; }
+.lightbox-arrow-right { right: 16px; }
+
 .overlay-img-clickable {
   cursor: zoom-in;
   transition: opacity 0.15s;
