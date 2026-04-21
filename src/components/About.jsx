@@ -55,7 +55,7 @@ export default function About() {
       </section>
 
       <footer className="site-footer">
-        <span className="footer-copy">Pablo Scherpereel Arce — Portfolio 2026</span>
+        <span className="footer-copy">Pablo Scherpereel Arce · Portfolio 2026</span>
       </footer>
     </>
   )
