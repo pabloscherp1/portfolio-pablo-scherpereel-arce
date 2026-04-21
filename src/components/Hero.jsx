@@ -100,7 +100,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.h1 className="hero-title" variants={itemVariants}>
-            <span className="hero-title-line">Aerospace</span>
+            <span className="hero-title-line">Aerospace &amp;</span>
             <em className="hero-title-line">Systems Engineer</em>
           </motion.h1>
 

@@ -160,12 +160,12 @@ const projects = [
     badge: "2022–23",
     tags: ["Structural Design", "CFRP Lamination", "Integration", "ERT EPFL"],
     brief: "Structural design and CFRP lamination of the payload bay and nosecone for the Nordend sounding rocket.",
-    overview: "Nordend's nosecone had to fit a 3U CubeSat (141.42 mm diagonal) inside a slide-in section with only 149.51 mm of internal diameter, making the Payload Integration Structure one of the most constrained components on the vehicle under strict EuRoC mass limits. The PIS evolved to a final PA6-CF 3D-printed plate configuration with metal rod guiding rails, sized to survive launch acceleration and chute deployment loads verified by von Mises FEA. PETG was tested and rejected for insufficient rigidity at rod attachment corners; PA6-CF retained printability while resolving the stiffness problem.\n\nBeyond the PIS, the tangent-ogive nosecone shape was co-designed with the flight dynamics team and optimised for Nordend's supersonic speed regime and hand-laminated in CFRP, with only the removable tip printed in PA6-CF, giving direct hands-on composite manufacturing experience alongside the structural analysis work.",
+    overview: "Nordend's nosecone had to fit a 3U CubeSat (141.42 mm diagonal) inside a slide-in section with only 149.51 mm of internal diameter, making the Payload Integration Structure one of the most constrained components on the vehicle under strict EuRoC mass limits. The PIS evolved to a final PA6-CF 3D-printed plate configuration with metal rod guiding rails, sized to survive launch acceleration and chute deployment loads verified by von Mises FEA. PETG was tested and rejected for insufficient rigidity at rod attachment corners; PA6-CF retained printability while resolving the stiffness problem.\n\nBeyond the PIS, the tangent-ogive nosecone shape was co-designed with the flight dynamics team and optimised for Nordend's supersonic speed regime. Originally planned as a CFRP hand-laminate, curing problems with the mould forced a pivot to FDM printing in PA6-CF across three bonded sections, giving direct hands-on experience with both composite and additive manufacturing tradeoffs under real schedule pressure.",
     skills: ["Structural Design", "3D Printing", "SolidWorks", "Payload Integration", "Nosecone Design", "CFRP Lamination", "FEA"],
     keyDetails: [
       { label: "Role", value: "Structural Engineer" },
       { label: "Period", value: "September 2022 – September 2023" },
-      { label: "Scope", value: "Payload integration structure, nosecone co-design and CFRP lamination" },
+      { label: "Scope", value: "Payload integration structure, nosecone co-design, material selection and FEA verification" },
       { label: "Program", value: "Nordend · ERT EPFL" }
     ],
     heroPlaceholder: "08-hero.jpg",
