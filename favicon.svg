@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#1A1A1A"/>
+  <!-- orbit ring, tilted -->
+  <ellipse cx="16" cy="16" rx="11" ry="5.5" fill="none" stroke="#C4602A" stroke-width="1.6" transform="rotate(-28 16 16)"/>
+  <!-- central body -->
+  <circle cx="16" cy="16" r="2.4" fill="#C4602A"/>
+  <!-- small satellite dot on the ring -->
+  <circle cx="26.3" cy="13.6" r="1.3" fill="#C4602A"/>
+</svg>
