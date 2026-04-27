@@ -50,7 +50,7 @@ export default function ProjectCard({ project, variant = 'regular', onClick, del
       <p className="card-subtitle">{project.subtitle}</p>
 
       <div className="card-tags">
-        {project.tags.map((tag) => (
+        {[...project.cardSkills, project.tags[project.tags.length - 1]].map((tag) => (
           <span key={tag} className="card-tag">{tag}</span>
         ))}
       </div>
