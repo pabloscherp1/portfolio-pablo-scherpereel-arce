@@ -113,6 +113,10 @@ export default function Hero() {
             ↓ Scroll to projects
           </motion.a>
         </div>
+
+        <motion.figure className="hero-photo" variants={itemVariants}>
+          <img src="media/01/hero-rocket.jpg" alt="Pablo beside an amateur high-power rocket on a desert lakebed" />
+        </motion.figure>
       </motion.div>
 
       <motion.div

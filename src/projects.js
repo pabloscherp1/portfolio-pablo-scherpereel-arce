@@ -64,7 +64,8 @@ const projects = [
     heroPlaceholder: "03-hero.jpg",
     heroImage: "media/03/03-hero.jpeg",
     galleryPlaceholders: ["03-gallery-1.jpg", "03-gallery-2.jpg", "03-gallery-3.jpg"],
-    galleryImages: ["media/03/03-dynamicsim.png", "media/03/03-halo-orbit.png", "media/03/03-photo.jpg"],
+    galleryImages: ["media/03/03-dynamicsim.png", "media/03/03-halo-orbit.png", "media/03/03-nulling-interferometer.png"],
+    galleryImagesContain: [false, false, true],
     featured: false
   },
   {
