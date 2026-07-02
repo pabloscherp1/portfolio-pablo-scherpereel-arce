@@ -13,7 +13,7 @@ export default function About() {
             on the Endurance lunar rover at NASA JPL. Former Chief Engineer of ARIS
             Hermes, structural and recovery lead at EPFL Rocket Team and GNC
             researcher on multi-spacecraft interferometry. Based in Zurich. Open to
-            space systems, structural, GNC, analysis and test engineering roles
+            space systems, structural, analysis and test engineering roles
             from November 2026.
           </p>
         </div>
