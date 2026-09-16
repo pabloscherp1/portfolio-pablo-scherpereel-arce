@@ -11,10 +11,11 @@ export default function About() {
           <p className="about-bio">
             MSc Mechanical Engineering at ETH Zurich, finishing a Master's thesis
             on the Endurance lunar rover at NASA JPL. Former Chief Engineer of ARIS
-            Hermes, structural and recovery lead at EPFL Rocket Team and GNC
-            researcher on multi-spacecraft interferometry. Based in Zurich. Open to
-            space systems, structural, analysis and test engineering roles
-            from November 2026.
+            Hermes and GNC researcher on multi-spacecraft interferometry, with
+            earlier roles as structural engineer and recovery team lead at EPFL
+            Rocket Team. Based in Zurich. Open to GNC research positions and space
+            systems, structural, analysis and test engineering roles from
+            November 2026.
           </p>
         </div>
 
