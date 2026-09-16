@@ -19,8 +19,8 @@ const projects = [
     heroPlaceholder: "01-hero.jpg",
     heroImage: "media/01/01-hero.jpg",
     galleryPlaceholders: ["01-2.jpg", "01-3.jpg", "01-4.jpg"],
-    galleryImages: ["media/01/01-missionsim.gif", "media/01/01-evaluation-pipeline.png", "media/01/01-autonomy-levels.png"],
-    galleryImagesContain: [false, true, true],
+    galleryImages: ["media/01/01-autonomy-levels.png", "media/01/01-evaluation-pipeline.png", "media/01/01-missionsim.gif"],
+    galleryImagesContain: [true, true, false],
     featured: true,
     ongoing: true
   },
