@@ -357,6 +357,14 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 60px;
 }
 
+/* Personal 2-col grid */
+.personal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  margin-bottom: 60px;
+}
+
 /* Coursework subsection */
 .coursework-header {
   display: flex;
@@ -902,6 +910,7 @@ a.contact-value:hover { color: var(--accent); }
   .projects-section { padding: 48px 20px 64px; }
   .featured-grid { grid-template-columns: 1fr; }
   .regular-grid { grid-template-columns: 1fr; }
+  .personal-grid { grid-template-columns: 1fr; }
   .coursework-grid { grid-template-columns: 1fr; }
 
   /* Overlay */

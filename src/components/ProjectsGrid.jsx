@@ -2,7 +2,8 @@ import ProjectCard from './ProjectCard'
 
 export default function ProjectsGrid({ projects, onProjectClick }) {
   const featured   = projects.filter((p) => p.featured)
-  const regular    = projects.filter((p) => !p.featured && !p.coursework)
+  const regular    = projects.filter((p) => !p.featured && !p.coursework && !p.personal)
+  const personal   = projects.filter((p) => p.personal)
   const coursework = projects.filter((p) => p.coursework)
 
   return (
@@ -31,6 +32,23 @@ export default function ProjectsGrid({ projects, onProjectClick }) {
       {/* Regular — 3 col */}
       <div className="regular-grid">
         {regular.map((p, i) => (
+          <ProjectCard
+            key={p.id}
+            project={p}
+            variant="regular"
+            onClick={onProjectClick}
+            delay={i * 0.08}
+          />
+        ))}
+      </div>
+
+      {/* Personal — 2 col */}
+      <div className="coursework-header">
+        <span className="coursework-label">Personal Projects</span>
+        <span className="section-count">{personal.length} projects</span>
+      </div>
+      <div className="personal-grid">
+        {personal.map((p, i) => (
           <ProjectCard
             key={p.id}
             project={p}

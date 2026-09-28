@@ -123,7 +123,7 @@ const projects = [
     badge: "2024",
     tags: ["Parachute Recovery", "Pyrotechnics", "Requirements", "ERT EPFL"],
     brief: "Year 1 lead of Firehorn's dual-event recovery system, replacing the previous hot-wire reefing cutter with a faster, more reliable pyrotechnic design.",
-    overview: "Firehorn, the EPFL Rocket Team's (ERT) cryogenic bi-liquid rocket, recovers with a dual-event descent: drogue at apogee, followed by a reefed main parachute that disreefs at lower altitude once the reefing line is cut. The design builds on ERT's reefed architecture from the previous year, replacing its hot-wire line cutter, which was slow and less predictable, with a faster and more reliable pyrotechnic cutter.\n\nFirehorn was a two-year programme, and I led the 6-person Recovery team through its first year: requirements derivation, interface definition with avionics and structures, and design up to a maturity between PDR and CDR. The most technically demanding contribution was the first iteration of the pyro cutter, a custom device that fires at altitude, severs a loaded Dyneema line and avoids shrapnel risk to adjacent components, alongside a first prototype of the recovery electronics board and the main parachute sizing. I ran the design and requirements reviews and handed a preliminary verification plan to the Year 2 team, who took the system through testing.",
+    overview: "Firehorn, the EPFL Rocket Team's (ERT) cryogenic bi-liquid rocket, recovers with a dual-event descent: drogue at apogee, followed by a reefed main parachute that disreefs at lower altitude once the reefing line is cut. The design builds on ERT's reefed architecture from the previous year, replacing its hot-wire line cutter, which was slow and less predictable, with a faster and more reliable pyrotechnic cutter.\n\nFirehorn was a two-year programme, and I led the 6-person Recovery team through its first year, from requirements derivation and interface definition with avionics and structures up to a design maturity between PDR and CDR. The most technically demanding contribution was the first iteration of the pyro cutter, a custom device that fires at altitude, severs a loaded Dyneema line and avoids shrapnel risk to adjacent components, alongside a first prototype of the recovery electronics board and the main parachute sizing. I ran the design and requirements reviews and handed a preliminary verification plan to the Year 2 team, who took the system through testing.",
     skills: ["Recovery Systems", "Parachute Design", "Pyrotechnics", "Interface Management", "Requirements Engineering", "Verification Planning"],
     cardSkills: ["Recovery Systems", "Parachute Design", "Pyrotechnics", "Requirements Engineering", "Verification Planning"],
     keyDetails: [
@@ -188,6 +188,54 @@ const projects = [
   },
   {
     id: "09",
+    title: "Satellite Inspection Mission Planner",
+    subtitle: "ORBWATCH · Personal Project",
+    badge: "2026",
+    tags: ["Orbital Dynamics", "Mission Design", "Proximity Operations", "Open Source"],
+    brief: "Open-source Python toolchain that reads a satellite's behaviour from public tracking data and plans a passively safe inspection mission to it.",
+    overview: "Thousands of satellites are known to the public only through element sets, the orbit fits the US catalogue publishes several times a day. They say nothing directly about manoeuvres or propellant, and planning a mission to reach one usually takes professional tools. This project asks what public data alone can reveal about a satellite, and what it would take to go and inspect it.\n\nI built ORBWATCH as an open-source Python toolchain around that question. From a year of Space-Track history it rejects bad element sets, detects manoeuvres as departures from the natural drift and checks their delta-v against physics: drag make-up in low orbit and the Laplace-plane precession a geostationary satellite must cancel even when its corrections are too small to see. It recovered all ten ISS reboosts NASA announced in a year, and learns a geostationary operator's east-west cycle well enough to forecast its next burn.\n\nThe inspection case is ENVISAT. J2 drift orbits line up the orbit planes for free, traded against time, before Hohmann transfers and a Lambert approach to a hold point 5 km behind. Proximity operations use the Clohessy-Wiltshire equations: radial hops and a safety ellipse with radial and cross-track separation, with every burn checked for what happens if it fails. A 1,000-run Monte Carlo over navigation and thruster errors sizes the proximity delta-v, and the full budget carries ESA margins. Each layer is tested against an independent reference, from astropy to NASA's reboost record, and all of it runs in a local browser interface.",
+    skills: ["Orbital Dynamics", "Mission Design", "Rendezvous & Proximity Operations", "Space Domain Awareness", "Monte Carlo Analysis", "Delta-V Budgeting", "Software Testing", "Python"],
+    cardSkills: ["Orbital Dynamics", "Mission Design", "Proximity Operations", "Space Domain Awareness", "Python"],
+    keyDetails: [
+      { label: "Role", value: "Sole developer (personal project)" },
+      { label: "Period", value: "September 2026 – present" },
+      { label: "Scope", value: "Satellite behaviour from public data and inspection mission design" },
+      { label: "Validation", value: "All 10 announced ISS reboosts recovered · Lambert and sun-synchronous checks against published values" },
+      { label: "Code", value: "github.com/pabloscherp1/orbwatch · MIT licence" }
+    ],
+    heroPlaceholder: "orbwatch-hero.png",
+    heroImage: "media/orbwatch/mission-proximity.png",
+    galleryPlaceholders: ["orbwatch-gallery-1.png", "orbwatch-gallery-2.png", "orbwatch-gallery-3.png"],
+    galleryImages: ["media/orbwatch/behaviour-iss.png", "media/orbwatch/mission-transfer.png", "media/orbwatch/tracker.png"],
+    galleryImagesContain: [false, false, false],
+    featured: false,
+    personal: true,
+    ongoing: true
+  },
+  {
+    id: "10",
+    title: "IBEX High-Power Rocket",
+    subtitle: "Level 1 Certification · Personal Project",
+    badge: "2026",
+    tags: ["Avionics", "Embedded Systems", "Telemetry", "High-Power Rocketry"],
+    brief: "3-inch high-power rocket built for Level 1 certification, with a custom ESP32 avionics bay and live LoRa telemetry to a browser ground station.",
+    overview: "IBEX is the 3-inch cardboard high-power rocket I built and flew for my Level 1 high-power certification at the ROC launch site in Lucerne Valley, California. For its next flight on an I205 motor, simulated in OpenRocket at about 1.1 km apogee and Mach 0.74, I designed an avionics bay to record the flight and stream it live to the flight line. Recovery stays on motor ejection, so the electronics are kept out of the safety path: if the firmware or the radio fails, only data is lost.\n\nThe flight computer is an ESP32 Feather reading a BMP388 barometer and a BNO085 IMU over I²C, logging at 100 Hz to onboard flash and sending 10 Hz telemetry over a 915 MHz LoRa link. The BNO085 breaks I²C clock-stretching timing on the ESP32, which a pull-up and a hardware reset line resolve. After landing the board turns into a WiFi access point for log download. On the ground a second Feather feeds a Python FastAPI server that logs every packet and streams it to a browser dashboard. The sled and bulkhead mount are 3D printed, and a link test at the launch site ran without a dropped packet. The first flight with the avionics bay is scheduled for October 2026.",
+    skills: ["Avionics", "Embedded C++", "ESP32", "LoRa Telemetry", "Sensor Integration", "Ground Station Software", "OpenRocket", "3D Printing"],
+    cardSkills: ["Avionics", "LoRa Telemetry", "ESP32", "OpenRocket"],
+    keyDetails: [
+      { label: "Role", value: "Designer and builder (personal project)" },
+      { label: "Period", value: "2026" },
+      { label: "Scope", value: "Airframe, flight computer, LoRa telemetry and ground station" },
+      { label: "Certification", value: "Level 1 high-power · ROC, Lucerne Valley, California" }
+    ],
+    heroPlaceholder: "ibex-hero.jpg",
+    galleryPlaceholders: ["ibex-gallery-1.jpg", "ibex-gallery-2.jpg", "ibex-gallery-3.jpg"],
+    featured: false,
+    personal: true,
+    ongoing: true
+  },
+  {
+    id: "11",
     title: "Anti-Buckling Ring FEA",
     subtitle: "EPFL · ME-373 Coursework",
     badge: "2024",
@@ -212,7 +260,7 @@ const projects = [
     coursework: true
   },
   {
-    id: "10",
+    id: "12",
     title: "Multi-Sensor Heating Tank",
     subtitle: "EPFL · ME-301 Coursework",
     badge: "2024",
@@ -236,7 +284,7 @@ const projects = [
     coursework: true
   },
   {
-    id: "11",
+    id: "13",
     title: "Gripper Design & Testing",
     subtitle: "EPFL · ME-320 Coursework",
     badge: "2023",
@@ -258,7 +306,7 @@ const projects = [
     coursework: true
   },
   {
-    id: "12",
+    id: "14",
     title: "Mechanical Carrot Peeler",
     subtitle: "EPFL · ME-102 Coursework",
     badge: "2022",
