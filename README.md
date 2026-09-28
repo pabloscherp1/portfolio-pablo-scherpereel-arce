@@ -2,7 +2,7 @@
 
 Personal portfolio site. Built with React and Vite, deployed to GitHub Pages.
 
-**Live:** https://pabloscherp1.github.io/portfolio-pablo-scherpereel-arce/
+**Live:** https://pabloscherpereel.com/
 
 ---
 
