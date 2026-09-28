@@ -198,10 +198,10 @@ const projects = [
     cardSkills: ["Orbital Dynamics", "Mission Design", "Proximity Operations", "Space Domain Awareness", "Python"],
     keyDetails: [
       { label: "Role", value: "Sole developer (personal project)" },
-      { label: "Period", value: "September 2026 – present" },
+      { label: "Period", value: "2026" },
       { label: "Scope", value: "Satellite behaviour from public data and inspection mission design" },
       { label: "Validation", value: "All 10 announced ISS reboosts recovered · Lambert and sun-synchronous checks against published values" },
-      { label: "Code", value: "github.com/pabloscherp1/orbwatch · MIT licence" }
+      { label: "Code", value: "github.com/pabloscherp1/orbwatch", href: "https://github.com/pabloscherp1/orbwatch" }
     ],
     heroPlaceholder: "orbwatch-hero.png",
     heroImage: "media/orbwatch/mission-proximity.png",
@@ -218,14 +218,14 @@ const projects = [
     badge: "2026",
     tags: ["Avionics", "Embedded Systems", "Telemetry", "High-Power Rocketry"],
     brief: "3-inch high-power rocket built and flown for Level 1 certification, with a custom ESP32 avionics bay and live LoRa telemetry to a browser ground station.",
-    overview: "IBEX is the 3-inch cardboard high-power rocket I built and flew on an H motor for my Level 1 certification at the ROC launch site in Lucerne Valley, California. I then designed an avionics bay to record its flights and stream them live to the flight line, sized for an I205 motor that OpenRocket puts at about 1.1 km apogee and Mach 0.74. Recovery stayed on motor ejection, which kept the electronics out of the safety path: a firmware or radio failure would cost data, not the rocket.\n\nThe flight computer was an ESP32 Feather reading a BMP388 barometer and a BNO085 IMU over I²C, logging at 100 Hz to onboard flash and sending 10 Hz telemetry over a 915 MHz LoRa link. The BNO085 broke I²C clock-stretching timing on the ESP32, which a pull-up and a hardware reset line resolved. After landing the board turned into a WiFi access point for log download. On the ground a second Feather fed a Python FastAPI server that logged every packet and streamed it to a browser dashboard. The sled and bulkhead mount were 3D printed, and a link test at the launch site ran without a dropped packet.",
+    overview: "IBEX is the 3-inch cardboard high-power rocket I built and flew for my Level 1 certification on an H115W motor at the ROC launch site in Lucerne Valley, California. I then flew it again on an I205W, this time carrying an avionics bay I designed to record the flight and stream it live to the flight line. Recovery stayed on motor ejection, keeping the electronics out of the safety path.\n\nThe flight computer was an ESP32 reading a barometer and an IMU, logging at 100 Hz to onboard flash and sending 10 Hz telemetry over a 915 MHz LoRa link. On the ground a second ESP32 fed a Python server that logged every packet and streamed it to a live browser dashboard.",
     skills: ["Avionics", "Embedded C++", "ESP32", "LoRa Telemetry", "Sensor Integration", "Ground Station Software", "OpenRocket", "3D Printing"],
     cardSkills: ["Avionics", "LoRa Telemetry", "ESP32", "OpenRocket"],
     keyDetails: [
       { label: "Role", value: "Designer and builder (personal project)" },
       { label: "Period", value: "2026" },
       { label: "Scope", value: "Airframe, flight computer, LoRa telemetry and ground station" },
-      { label: "Certification", value: "Level 1 high-power (H motor) · ROC, Lucerne Valley, California" }
+      { label: "Certification", value: "Level 1 high-power (H115W) · ROC, Lucerne Valley, California" }
     ],
     heroPlaceholder: "ibex-hero.jpg",
     heroImage: "media/ibex/ibex-launch.jpg",
