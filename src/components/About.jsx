@@ -45,6 +45,18 @@ export default function About() {
           </div>
 
           <div className="contact-item">
+            <span className="contact-label">GitHub</span>
+            <a
+              className="contact-value"
+              href="https://github.com/pabloscherp1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              pabloscherp1
+            </a>
+          </div>
+
+          <div className="contact-item">
             <span className="contact-label">Location</span>
             <span className="contact-value">Zurich, Switzerland</span>
           </div>
