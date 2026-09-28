@@ -122,14 +122,14 @@ const projects = [
     subtitle: "ERT EPFL · Subsystem Team Lead",
     badge: "2024",
     tags: ["Parachute Recovery", "Pyrotechnics", "Requirements", "ERT EPFL"],
-    brief: "Dual-event recovery system and first-iteration pyrotechnic reefing-line cutter for Firehorn, built from scratch with no prior team heritage.",
-    overview: "Firehorn's recovery system uses a dual-event descent: drogue at apogee, followed by a reefed main parachute with a pyrotechnic reefing-line cutter releasing at lower altitude. Designing this for a first-generation cryogenic bi-liquid rocket of the EPFL Rocket Team (ERT) meant building from scratch with no prior team heritage on this architecture.\n\nAs Recovery Team Lead for the first year of development, a 6-person team was coordinated through requirements derivation, interface definition with avionics and structures, and preliminary design. The most technically demanding contribution was the first iteration of the reefing-line pyro cutter, a custom device that fires at altitude, severs a loaded Dyneema line and avoids shrapnel risk to adjacent components. Design and requirements reviews were run, and a full verification plan handed over to the Year 2 team.",
+    brief: "Year 1 lead of Firehorn's dual-event recovery system, replacing the previous hot-wire reefing cutter with a faster, more reliable pyrotechnic design.",
+    overview: "Firehorn, the EPFL Rocket Team's (ERT) cryogenic bi-liquid rocket, recovers with a dual-event descent: drogue at apogee, followed by a reefed main parachute that disreefs at lower altitude once the reefing line is cut. The design builds on ERT's reefed architecture from the previous year, replacing its hot-wire line cutter, which was slow and less predictable, with a faster and more reliable pyrotechnic cutter.\n\nFirehorn was a two-year programme, and I led the 6-person Recovery team through its first year: requirements derivation, interface definition with avionics and structures, and design up to a maturity between PDR and CDR. The most technically demanding contribution was the first iteration of the pyro cutter, a custom device that fires at altitude, severs a loaded Dyneema line and avoids shrapnel risk to adjacent components, alongside a first prototype of the recovery electronics board and the main parachute sizing. I ran the design and requirements reviews and handed a preliminary verification plan to the Year 2 team, who took the system through testing.",
     skills: ["Recovery Systems", "Parachute Design", "Pyrotechnics", "Interface Management", "Requirements Engineering", "Verification Planning"],
     cardSkills: ["Recovery Systems", "Parachute Design", "Pyrotechnics", "Requirements Engineering", "Verification Planning"],
     keyDetails: [
       { label: "Role", value: "Recovery Team Lead" },
       { label: "Period", value: "February – August 2024" },
-      { label: "Scope", value: "Requirements, interfaces, pyro cutter, parachute design and verification planning" },
+      { label: "Scope", value: "Requirements, interfaces, pyro cutter, parachute sizing and preliminary verification plan" },
       { label: "Program", value: "Firehorn · ERT EPFL" }
     ],
     heroPlaceholder: "06-hero.jpg",
