@@ -365,6 +365,8 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 60px;
 }
 
+.personal-grid .card-img-real { height: 220px; }
+
 /* Coursework subsection */
 .coursework-header {
   display: flex;
@@ -655,6 +657,18 @@ a { color: inherit; text-decoration: none; }
 .key-detail-value {
   font-size: 14px;
   line-height: 1.5;
+}
+
+.key-detail-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rule);
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+}
+
+.key-detail-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .overlay-footer {

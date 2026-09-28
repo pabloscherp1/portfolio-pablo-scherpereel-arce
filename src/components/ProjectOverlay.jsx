@@ -166,7 +166,11 @@ export default function ProjectOverlay({ project, onClose, onNext, onPrev, hasPr
                 {project.keyDetails.map((d) => (
                   <div key={d.label} className="key-detail">
                     <span className="key-detail-label">{d.label}</span>
-                    <span className="key-detail-value">{d.value}</span>
+                    <span className="key-detail-value">
+                      {d.href
+                        ? <a href={d.href} target="_blank" rel="noopener noreferrer" className="key-detail-link">{d.value}</a>
+                        : d.value}
+                    </span>
                   </div>
                 ))}
               </div>

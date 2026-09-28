@@ -225,7 +225,8 @@ const projects = [
       { label: "Role", value: "Designer and builder (personal project)" },
       { label: "Period", value: "2026" },
       { label: "Scope", value: "Airframe, flight computer, LoRa telemetry and ground station" },
-      { label: "Certification", value: "Level 1 high-power (H115W) · ROC, Lucerne Valley, California" }
+      { label: "Certification", value: "Level 1 high-power (H115W) · ROC, Lucerne Valley, California" },
+      { label: "Code", value: "github.com/pabloscherp1/ibex-avionics", href: "https://github.com/pabloscherp1/ibex-avionics" }
     ],
     heroPlaceholder: "ibex-hero.jpg",
     heroImage: "media/ibex/ibex-launch.jpg",
