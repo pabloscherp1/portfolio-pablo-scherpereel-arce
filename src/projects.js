@@ -209,8 +209,7 @@ const projects = [
     galleryImages: ["media/orbwatch/behaviour-iss.png", "media/orbwatch/mission-transfer.png", "media/orbwatch/tracker.png"],
     galleryImagesContain: [false, false, false],
     featured: false,
-    personal: true,
-    ongoing: true
+    personal: true
   },
   {
     id: "10",
